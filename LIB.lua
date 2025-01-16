@@ -1,17 +1,19 @@
 --ALL credits go to Eazvy for showcasing https://github.com/Eazvy/UILibs/blob/main/Librarys/Playstation/Example which provided src
 --This is slightly modified to add set functionality
 
-local function DestroyYep()
-    for x = 1,69 do 
-        if game.CoreGui:FindFirstChild("fu8rj82n") then game.CoreGui:FindFirstChild("fu8rj82n"):Destroy() end
-    end
-end
-
-DestroyYep()
-wait(0.069)
-
 local Library = {}
-local gethui = gethui or (function() return game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui") end)
+local gethui = (function() return game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui") end)
+
+local HEISTUI = game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):FindFirstChild("asdnjasnj97878978178")
+while true do
+    if HEISTUI then
+        warn("Already executed")
+        return
+    else
+        break
+    end
+    wait()
+end
 
 function Library:CreateWindow(windowname,windowinfo)
     local fu8rj82n = Instance.new("ScreenGui")
@@ -30,7 +32,7 @@ function Library:CreateWindow(windowname,windowinfo)
     local YepTitle = Instance.new("TextLabel")
     local YepCorner = Instance.new("UICorner")
 
-    fu8rj82n.Name = "fu8rj82n" -- 144 was here 29/12/24
+    fu8rj82n.Name = "asdnjasnj97878978178" -- 144 was here 29/12/24
     fu8rj82n.Parent = gethui()
     fu8rj82n.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     fu8rj82n.ResetOnSpawn = false
@@ -883,4 +885,3 @@ function Library:CreateWindow(windowname,windowinfo)
     return PageYep
 end
 return Library
-
